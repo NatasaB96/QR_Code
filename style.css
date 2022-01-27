@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap');
+/* basic style*/
+
+:root{
+    --white: hsl(0, 0%, 100%);
+    --lightGray: hsl(212, 45%, 89%);
+    --grayishBlue: hsl(220, 15%, 55%);
+    --darkBlue: hsl(218, 44%, 22%);
+    --fontSize: 15px;
+    --fontFamily: 'Outfit', sans-serif;
+    --fontWeightHeadings: 700;
+    --fontWeight:400;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-size: var(--fontSize);
+    font-family: var(--fontFamily);
+    background-color: var(--lightGray);
+    letter-spacing: 0.5px;
+}
+
+/*qr Code*/
+
+.qrCode{
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    align-items: center;
+}
+
+.qrCode .box{
+    width: 350px;
+    background-color: var(--white);
+    border-radius: 5%;
+    padding: 15px;
+}
+
+.qrCode img{
+    width: 100%;
+    border-radius: 5%;
+}
+
+.qrCode .text{
+    padding: 20px;
+}
+
+.qrCode p{
+    text-align: center;
+}
+
+.qrCode .headings{
+    font-weight: var(--fontWeightHeadings);
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+}
+
+.qrCode p:last-child{
+    color: var(--grayishBlue);
+    margin-bottom: 25px;
+    font-weight: var(--fontWeight);  
+}
+
+/* footer */
+
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+}
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+
+/* responsive */
+@media(max-width:375px){
+
+    .qrCode .box{
+        width: 85%;
+        height: auto;
+    }
+
+    .qrCode img{
+        width: 100%;
+        height: auto;
+    }
+
+    .qrCode .headings{
+        font-size: 1.2rem;
+    }
+
+    .qrCode p:last-child{
+        font-size: .8rem;
+    }
+}
